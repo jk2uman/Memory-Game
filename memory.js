@@ -61,7 +61,7 @@ let cardsWon = []
 function boardCreator () {
     for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
-        card.setAttribute('src', '/images/blank.jpg')
+        card.setAttribute('src', 'images/blank.jpg')
         card.setAttribute('data-id', i)
         card.addEventListener('click', cardFlip)
         grid.appendChild(card)
@@ -86,18 +86,18 @@ function checkMatch() {
    
     if (optionAId == optionBId) {
         alert("You've clicked the same image!")
-        cards[optionAId].setAttribute('src', '/images/blank.jpg')
-        cards[optionBId].setAttribute('src', '/images/blank.jpg')       
+        cards[optionAId].setAttribute('src', 'images/blank.jpg')
+        cards[optionBId].setAttribute('src', 'images/blank.jpg')       
     } else if (cardsChosen[0] === cardsChosen[1]) {
         alert("You've got a match")
-        cards[optionAId].setAttribute('src', '/images/black.webp')
-        cards[optionBId].setAttribute('src', '/images/black.webp')
+        cards[optionAId].setAttribute('src', 'images/black.webp')
+        cards[optionBId].setAttribute('src', 'images/black.webp')
         cards[optionAId].removeEventListener('click', cardFlip)
         cards[optionBId].removeEventListener('click', cardFlip)
         cardsWon.push(cardsChosen)
     } else{
-        cards[optionAId].setAttribute('src', '/images/blank.jpg')
-        cards[optionBId].setAttribute('src', '/images/blank.jpg') 
+        cards[optionAId].setAttribute('src', 'images/blank.jpg')
+        cards[optionBId].setAttribute('src', 'images/blank.jpg') 
         alert('Wrong, Try Again')
     }
     cardsChosen = []
